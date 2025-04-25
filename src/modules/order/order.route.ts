@@ -10,7 +10,7 @@ router.get('/verify', authenticateJWT, authorizeRole(['user','admin']), verifyPa
 
 router.get('/revenue', authenticateJWT, authorizeRole(['admin']), getRevenue);
 
-router.get('/users/:userId', authenticateJWT, authorizeRole(['user','admin']), fetchUserOrders);
+router.get('/users/:userId', authenticateJWT, authorizeRole([ 'admin']), fetchUserOrders);
 router.patch('/status/:orderId', authenticateJWT, authorizeRole(['admin']), updateOrderStatus);
 
 export default router;

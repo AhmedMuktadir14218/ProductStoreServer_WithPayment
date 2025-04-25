@@ -14,7 +14,7 @@ const CarSchema: Schema = new Schema<ICar>({
     description: { type: String, required: true },
     quantity: { type: Number, required: true, min: 0 },
     inStock: { type: Boolean, default: true },
-    imageUrl: { type: String  }
+    imageUrl: { type: String }
   }, { timestamps: true });
 
 export default mongoose.model<ICar>('Car', CarSchema);
